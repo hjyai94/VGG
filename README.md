@@ -25,7 +25,7 @@ to download more images to train.
 * f1 = 72%
 
 ## Example output:
-We choosed some pictures from the internet to validate the VGG19 Net, the sunset images or warm lights images are difficult to idetify, and some non-fire images misidentified.
+We choosed some pictures from the internet to validate the VGG19 Net, the sunset images or warm lights images are difficult to identify, and some non-fire images misidentified.
 See the results below:
 
 ![2017-11-23-09-50-55](http://qiniu.xdpie.com/2017-11-23-09-50-55.png)
