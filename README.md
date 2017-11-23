@@ -13,7 +13,7 @@ to download more images to train.
 
 ## Modifications
 * image_generator: We abandoned the image iterator used in previous Alexnet, and created a new gennerator with tensorflow queue.
-* In this VGG19 Net, we use precision, recall and f1 to measure the performance of the net, those parameters are always used in Statistics.
+* In this VGG19 Net, we used precision, recall and f1 to measure the performance of the net, those parameters are always used in Statistics.
 
 ## Notes:
 * The vgg19 net and datagenerator files have been builded, you don't have to modify it. But if you have more concise or effective codes, please do share them with us.
