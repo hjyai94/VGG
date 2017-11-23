@@ -1,4 +1,4 @@
-# tensorflow_alexnet_classify
+# tensorflow_vgg19_classify
 > This repository aims to implement a VGG19 with tensorflow . it gives a pretrain weight (vgg19.npy), you can download from 
 [here](https://mega.nz/#!xZ8glS6J!MAnE91ND_WyfZ_8mvkuSa2YcA7q-1ehfSm-Q1fxOvvs).The training file contains 668 images(223 fire images and 445 non-fire images).
 The testing files only have 50 fire images and 50 non-fire images.Such few images impacted the precision and recall,which have lower results.We sincerely suggest you
