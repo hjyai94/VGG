@@ -16,7 +16,7 @@ def test_image(path_image, num_class):
     saver = tf.train.Saver()
     with tf.Session() as sess:
         sess.run(tf.global_variables_initializer())
-        saver.restore(sess, "./tmp/checkpoints/model_epoch3.ckpt")
+        saver.restore(sess, "./tmp/checkpoints/model_epoch100.ckpt")
 
         plt.imshow(img_decoded.eval())
         plt.title("Class:" + class_name[sess.run(prediction)[0]])

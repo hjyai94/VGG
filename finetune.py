@@ -90,8 +90,12 @@ writer = tf.summary.FileWriter(filewriter_path)
 saver = tf.train.Saver()
 
 with tf.Session() as sess:
+
+    coord = tf.train.Coordinator()
+    threads = tf.train.start_queue_runners(sess=sess, coord=coord)
+
     sess.run(tf.global_variables_initializer())
-    tf.train.start_queue_runners(sess=sess)
+    # tf.train.start_queue_runners(sess=sess)
 
     # 把模型图加入TensorBoard
     writer.add_graph(sess.graph)
@@ -101,7 +105,7 @@ with tf.Session() as sess:
 
         print("{} Epoch number: {} start".format(datetime.now(), epoch + 1))
         # 开始训练每一代
-        
+
         for step in range(num_iter):
             img_batch = sess.run(training.image_batch)
             label_batch = sess.run(training.label_batch)
@@ -143,3 +147,5 @@ with tf.Session() as sess:
         save_path = saver.save(sess, checkpoint_name)
 
         print("{} Epoch number: {} end".format(datetime.now(), epoch + 1))
+    coord.request_stop()
+    coord.join(threads)
